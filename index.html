@@ -1,0 +1,32 @@
+<html>
+
+<body id="body">
+    <span>
+        1
+    </span>
+    <span>
+        2
+    </span>
+    <button id="changeColor" >GO !</button>
+    <button id="stopColor">STOP</button>
+    <link rel="stylesheet" href="./style.css">
+</body>
+<script>
+    var changeColor = document.getElementById("changeColor");
+    var stopColor = document.getElementById("stopColor");
+    let timer = null;
+    changeColor.onclick = interval;
+    stopColor.onclick = stop;
+
+    function randomColor() {
+        var color = ["red", "blue", "black"];
+        document.getElementById("body").style.backgroundColor=color[Math.floor(Math.random()*color.length)];
+    }
+    function interval() {
+       timer = setInterval(randomColor,100);
+    }
+    function stop() {
+        clearInterval(timer);
+    }
+</script>
+</html>
