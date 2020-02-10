@@ -1,6 +1,6 @@
 <html>
 
-<body id="body">
+<body>
     <span>
         1
     </span>
@@ -20,7 +20,7 @@
 
     function randomColor() {
         var color = ["red", "blue", "black"];
-        document.getElementById("body").style.backgroundColor=color[Math.floor(Math.random()*color.length)];
+        document.body.style.backgroundColor=color[Math.floor(Math.random()*color.length)];
     }
     function interval() {
        timer = setInterval(randomColor,100);
